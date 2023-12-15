@@ -3,13 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rethink Sans', sans-serif;
-    /* font-family: 'Roboto', sans-serif;  */
 }
 :root{
-    --primary-color:#f8f8f8;
-    --secondry-color:#6f6f6f;
-    --blue-bg:#4e3eff;
-    --red-bg:#e90000;
     --black-bg:#000000;
     --font-color:#ffffff;
 }
@@ -29,31 +24,58 @@ body{
     background-blend-mode: color;   
     
 }
+
 .form_section{
-    width: clamp(310px, 70%, 400px);
+    width: clamp(310px, 90%, 400px);
     margin: 20px auto;
 }
+
 form{
   background-color: #fff;  
   padding: 2.5em 2em;
   /* height: 90vh; */
   border-radius: 10px;
 }
+
 h4{
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 15px;
+    margin-bottom: 30px;
 }
-label{
-    margin: 2em 0em;
-    display: block;
-    font-weight: 600;
-    /* transform: translateY(); */
+
+.input_field{
+    position: relative;
+    margin: 2.5em 0em;
+    height: 30px;
+    width: 100%;
 }
+
 input, textarea{
     width: 100%;
+    height: 100%;
     border: none;
-    border-bottom: 1px solid #1e1e1e;
     outline: none;
-    
+    background-color: transparent;
+    border-bottom: 2px solid #7c7c7c;
+}
+
+input:focus,
+input:valid{
+    border-bottom: 2px solid #1f1f1f;
+}
+
+.input_field label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+    font-weight: 500;
+} 
+.input_field input:focus~label,
+.input_field input:valid~label{
+    top: -5px;
 }
 
 input[type="file"]{
@@ -66,18 +88,19 @@ button[type="submit"] {
     border: none;
     background-color: #1e1e1e;
     color: var(--font-color);
-    /* float: right; */
   }
+
   button[type="submit"], label[for="user_file"]{
     cursor: pointer;
     
   }
+
   label[for="user_file"]{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 13px;
     }
+
     .file_upload_container{
         display: flex;
         align-items: center;
