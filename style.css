@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rethink Sans', sans-serif;
+    /* font-family: 'Roboto', sans-serif;  */
+}
+:root{
+    --primary-color:#f8f8f8;
+    --secondry-color:#6f6f6f;
+    --blue-bg:#4e3eff;
+    --red-bg:#e90000;
+    --black-bg:#000000;
+    --font-color:#ffffff;
+}
+
+.material-symbols-outlined {
+    margin-right: 5px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24,
+  
+}
+
+body{
+    background:rgba(28, 28, 28, 0.4) url("images/Map\ 2.jpg");
+    background-blend-mode: color;   
+    
+}
+.form_section{
+    width: clamp(310px, 70%, 400px);
+    margin: 20px auto;
+}
+form{
+  background-color: #fff;  
+  padding: 2.5em 2em;
+  /* height: 90vh; */
+  border-radius: 10px;
+}
+h4{
+    font-weight: 700;
+}
+label{
+    margin: 2em 0em;
+    display: block;
+    font-weight: 600;
+    /* transform: translateY(); */
+}
+input, textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #1e1e1e;
+    outline: none;
+    
+}
+
+input[type="file"]{
+    display: none;
+}
+
+button[type="submit"] {
+    padding: 1em 2em;
+    border-radius: 5px;
+    border: none;
+    background-color: #1e1e1e;
+    color: var(--font-color);
+    /* float: right; */
+  }
+  button[type="submit"], label[for="user_file"]{
+    cursor: pointer;
+    
+  }
+  label[for="user_file"]{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 13px;
+    }
+    .file_upload_container{
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width:320px) {
+        label[for="user_file"]{
+            flex-direction: column;
+            align-items: center;
+        }
+        .file_upload_container{
+            margin-bottom: 18px;
+            width: 100%;
+        }
+        button[type="submit"]{
+            width: 100%;
+        }
+    }
