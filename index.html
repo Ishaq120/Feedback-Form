@@ -19,34 +19,38 @@
   <body>
     <main>
       <section class="form_section">
-        <form action="">
+        <form action="get">
           <h4>FEEDBACK FORM</h4>
           
           <!-- Name Field -->
-          <label for=""
-            >Name
+          <div class="input_field">  
             <input type="text" required/>
-          </label>
-
-          <!-- Email Field -->
-          <label for=""
-            >Email
+            <label for="">Name</label>
+        </div>
+        
+        <!-- Email Field -->
+          <div class="input_field"> 
             <input type="email" required/>
-          </label>
+            <label for="">Email</label>
+          </div>
 
-          <!-- Phone Field -->
-          <label for=""
-            >Phone
+             <!-- Phone Field -->
+          <div class="input_field">
+           
             <input type="tel" required/>
-          </label>
+            <label for="">Phone</label>
+          </div>
 
           <!-- Message Field -->
-          <label for=""
-            >Message
+          <div class="input_field"> 
             <input type="text" required/>
-          </label>
+            <label for="">Message</label>
+          </div>
 
-          <!-- uploaded Document -->
+
+          <div class="">
+
+            <!-- uploaded Document -->
           <!-- I Link Label tag with [input type file] Using for [attribute of label] and [id attribute of input] type with same name-->
           <label for="user_file">
             <div class="file_upload_container">
@@ -61,6 +65,7 @@
               </span></button>
           </div>
           </label>
+          </div>
         
         </form>
       </section>
